@@ -1,0 +1,146 @@
+inherited frmMain_NmXhdpiPh: TfrmMain_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 3
+  inherited TabControl1: TTabControl
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    inherited tabItemList: TTabItem
+      Size.Width = 133.000000000000000000
+      inherited ToolBar1: TToolBar
+        Size.Width = 400.000000000000000000
+        inherited Label1: TLabel
+          Size.Width = 400.000000000000000000
+        end
+        inherited btnNewItem: TButton
+          Position.X = 352.000000000000000000
+          OnClick = nil
+        end
+      end
+      inherited lstEmployees: TListView
+        Size.Width = 400.000000000000000000
+        Size.Height = 386.000000000000000000
+        OnItemClick = nil
+      end
+      inherited Layout1: TLayout
+        Size.Width = 400.000000000000000000
+        inherited Rectangle1: TRectangle
+          Size.Width = 384.000000000000000000
+          inherited Image1: TImage
+            MultiResBitmap.Height = 704
+            MultiResBitmap.Width = 618
+            MultiResBitmap.LoadSize = 1
+          end
+          inherited Layout3: TLayout
+            Size.Width = 293.000000000000000000
+            inherited Label4: TLabel
+              Size.Width = 282.000000000000000000
+            end
+            inherited Label5: TLabel
+              Size.Width = 278.000000000000000000
+            end
+          end
+        end
+      end
+    end
+    inherited tabItemDetail: TTabItem
+      Size.Width = 134.000000000000000000
+      inherited ToolBar2: TToolBar
+        Size.Width = 400.000000000000000000
+        inherited Label2: TLabel
+          Size.Width = 263.000000000000000000
+        end
+        inherited btnBack: TButton
+          OnClick = nil
+        end
+        inherited btnDetailModify: TButton
+          Position.X = 352.000000000000000000
+          OnClick = nil
+        end
+      end
+      inherited VertScrollBox1: TVertScrollBox
+        Size.Width = 400.000000000000000000
+        Size.Height = 518.000000000000000000
+        inherited lytContentsDetail: TLayout
+          Size.Width = 400.000000000000000000
+          Size.Height = 386.000000000000000000
+          inherited ListBox1: TListBox
+            Size.Width = 400.000000000000000000
+            Size.Height = 386.000000000000000000
+            inherited ListBoxItem9: TListBoxItem
+              Size.Width = 400.000000000000000000
+              inherited Label6: TLabel
+                Size.Width = 2579.000000000000000000
+              end
+            end
+          end
+        end
+        inherited Layout4: TLayout
+          Size.Width = 400.000000000000000000
+          inherited Rectangle2: TRectangle
+            Size.Width = 384.000000000000000000
+            inherited Image3: TImage
+              MultiResBitmap.Height = 704
+              MultiResBitmap.Width = 618
+              MultiResBitmap.LoadSize = 1
+            end
+            inherited Layout5: TLayout
+              Size.Width = 293.000000000000000000
+              inherited Label7: TLabel
+                Size.Width = 282.000000000000000000
+              end
+              inherited Label8: TLabel
+                Size.Width = 278.000000000000000000
+              end
+            end
+          end
+        end
+      end
+    end
+    inherited tabitemNew: TTabItem
+      Size.Width = 133.000000000000000000
+      inherited ToolBar3: TToolBar
+        Size.Width = 400.000000000000000000
+        inherited Label3: TLabel
+          Size.Width = 400.000000000000000000
+        end
+        inherited btnNewCancel: TButton
+          OnClick = nil
+        end
+        inherited btnNewSave: TButton
+          Position.X = 344.000000000000000000
+          OnClick = nil
+        end
+      end
+      inherited VertScrollBox2: TVertScrollBox
+        Size.Width = 400.000000000000000000
+        Size.Height = 518.000000000000000000
+        inherited lytContentsNew: TLayout
+          Size.Width = 400.000000000000000000
+          Size.Height = 518.000000000000000000
+          inherited Layout2: TLayout
+            Size.Width = 400.000000000000000000
+            inherited Image2: TImage
+              MultiResBitmap.Height = 704
+              MultiResBitmap.Width = 618
+              MultiResBitmap.LoadSize = 1
+              inherited Button1: TButton
+                OnClick = nil
+              end
+            end
+          end
+          inherited ListBox2: TListBox
+            Size.Width = 400.000000000000000000
+            Size.Height = 405.000000000000000000
+            inherited ListBoxItem10: TListBoxItem
+              Size.Width = 400.000000000000000000
+              inherited Memo1: TMemo
+                Size.Width = 305.000000000000000000
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end

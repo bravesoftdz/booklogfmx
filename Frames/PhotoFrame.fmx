@@ -1,0 +1,149 @@
+object frPhoto: TfrPhoto
+  Size.Width = 414.000000000000000000
+  Size.Height = 493.000000000000000000
+  Size.PlatformDefault = False
+  TabOrder = 0
+  object Background: TRectangle
+    Align = Contents
+    Fill.Color = xFFA0A0A0
+    Opacity = 0.699999988079071100
+    Size.Width = 414.000000000000000000
+    Size.Height = 493.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    OnClick = BackgroundClick
+  end
+  object StyleBook1: TStyleBook
+    Left = 280
+    Top = 24
+    ResourcesBin = {
+      464D585F5354594C4520322E35010613436F726E6572427574746F6E31537479
+      6C6531034503005450463014544163746976654F7061636974794F626A656374
+      00095374796C654E616D650613436F726E6572427574746F6E315374796C6531
+      0D416374697665547269676765720707507265737365640D4163746976654F70
+      6163697479050000000000CDCCCCFC3F0A506F736974696F6E2E580500000000
+      000000D607400A506F736974696F6E2E590500000000000080AA07400A53697A
+      652E57696474680500000000000000C106400B53697A652E4865696768740500
+      000000000000B004401453697A652E506C6174666F726D44656661756C740800
+      0A5452656374616E676C6500095374796C654E616D65060A6261636B67726F75
+      6E6405416C69676E0708436F6E74656E74730A46696C6C2E436F6C6F72070863
+      6C6157686974650748697454657374080A53697A652E57696474680500000000
+      000000C106400B53697A652E4865696768740500000000000000B00440145369
+      7A652E506C6174666F726D44656661756C74080B5374726F6B652E4B696E6407
+      044E6F6E6507585261646975730500000000000000C000400759526164697573
+      0500000000000000C0004000001654427574746F6E5374796C65546578744F62
+      6A65637400095374796C654E616D6506047465787405416C69676E0706436C69
+      656E74064C6F636B6564090C4D617267696E732E4C6566740500000000000000
+      8000400B4D617267696E732E546F7005000000000000008000400D4D61726769
+      6E732E526967687405000000000000008000400E4D617267696E732E426F7474
+      6F6D05000000000000008000400A53697A652E57696474680500000000000000
+      BD06400B53697A652E4865696768740500000000000000A004401453697A652E
+      506C6174666F726D44656661756C740804546578740604746573741654657874
+      53657474696E67732E466F6E742E53697A650500000000000000A00340165465
+      787453657474696E67732E466F6E74436F6C6F7207097846463030374146460D
+      536861646F7756697369626C650808486F74436F6C6F72070978464630303741
+      46460C466F6375736564436F6C6F7207097846463030374146460B4E6F726D61
+      6C436F6C6F7207097846463030374146460C50726573736564436F6C6F720709
+      784646303037414646000000}
+  end
+  object ButtonLayout: TLayout
+    Align = Bottom
+    Position.Y = 309.000000000000000000
+    Size.Width = 414.000000000000000000
+    Size.Height = 184.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object btnCamera: TCornerButton
+      Action = TakePhotoFromCameraAction1
+      Anchors = [akLeft, akTop, akRight]
+      Corners = [TopLeft, TopRight]
+      Enabled = True
+      Position.X = 7.000000000000000000
+      Position.Y = 9.000000000000000000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 398.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'CornerButton1Style1'
+      TabOrder = 0
+      Visible = True
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+    end
+    object btnAlbum: TCornerButton
+      Action = TakePhotoFromLibraryAction1
+      Anchors = [akLeft, akTop, akRight]
+      Corners = []
+      Enabled = True
+      Position.X = 7.000000000000000000
+      Position.Y = 50.000000000000000000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 398.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'CornerButton1Style1'
+      TabOrder = 3
+      Visible = True
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+    end
+    object btnClear: TCornerButton
+      Anchors = [akLeft, akTop, akRight]
+      Corners = [BottomLeft, BottomRight]
+      Position.X = 7.000000000000000000
+      Position.Y = 91.000000000000000000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 398.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'CornerButton1Style1'
+      TabOrder = 2
+      Text = #49324#51652' '#51648#50864#44592
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = btnClearClick
+    end
+    object btnCancel: TCornerButton
+      Anchors = [akLeft, akTop, akRight]
+      StyledSettings = [Family, Size, FontColor]
+      Position.X = 7.000000000000000000
+      Position.Y = 137.000000000000000000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 398.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'CornerButton1Style1'
+      TabOrder = 1
+      Text = #52712#49548
+      TextSettings.Font.Style = [fsBold]
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = btnCancelClick
+    end
+    object FloatAnimation1: TFloatAnimation
+      Duration = 0.200000002980232200
+      OnFinish = FloatAnimation1Finish
+      PropertyName = 'Opacity'
+      StartValue = 0.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+  end
+  object ActionList1: TActionList
+    Left = 280
+    Top = 80
+    object TakePhotoFromCameraAction1: TTakePhotoFromCameraAction
+      Category = 'Media Library'
+      CustomText = #49324#51652' '#52524#50689
+      Editable = True
+      OnDidCancelTaking = TakePhotoFromCameraAction1DidCancelTaking
+      OnDidFinishTaking = TakePhotoFromCameraAction1DidFinishTaking
+    end
+    object TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction
+      Category = 'Media Library'
+      CustomText = #50536#48276#50640#49436' '#49324#51652' '#49440#53469
+      Editable = True
+      OnDidCancelTaking = TakePhotoFromLibraryAction1DidCancelTaking
+      OnDidFinishTaking = TakePhotoFromLibraryAction1DidFinishTaking
+    end
+  end
+end
