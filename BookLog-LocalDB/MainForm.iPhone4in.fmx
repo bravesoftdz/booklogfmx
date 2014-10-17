@@ -13,12 +13,12 @@ inherited frmMain_iPhone4in: TfrmMain_iPhone4in
           Size.Width = 320.000000000000000000
         end
         inherited btnNewItem: TButton
-          Position.X = 276.000000000000000000
+          Position.X = 272.000000000000000000
         end
       end
       inherited lstBooks: TListView
         Size.Width = 320.000000000000000000
-        Size.Height = 455.000000000000000000
+        Size.Height = 451.000000000000000000
       end
     end
     inherited tabItemDetail: TTabItem
@@ -26,10 +26,15 @@ inherited frmMain_iPhone4in: TfrmMain_iPhone4in
       inherited ToolBar2: TToolBar
         Size.Width = 320.000000000000000000
         inherited Label2: TLabel
-          Size.Width = 187.000000000000000000
+          Size.Width = 228.000000000000000000
+        end
+        inherited btnBack: TButton
+          Position.Y = 2.000000000000000000
+          Size.Width = 44.000000000000000000
+          Size.Height = 44.000000000000000000
         end
         inherited btnDetailModify: TButton
-          Position.X = 276.000000000000000000
+          Position.X = 272.000000000000000000
         end
       end
       inherited Layout4: TLayout
@@ -54,10 +59,10 @@ inherited frmMain_iPhone4in: TfrmMain_iPhone4in
       end
       inherited lytContentsDetail: TLayout
         Size.Width = 320.000000000000000000
-        Size.Height = 323.000000000000000000
+        Size.Height = 319.000000000000000000
         inherited ListBox1: TListBox
           Size.Width = 320.000000000000000000
-          Size.Height = 323.000000000000000000
+          Size.Height = 319.000000000000000000
           inherited ListBoxItem1: TListBoxItem
             inherited lblPublisher: TLabel
               Size.Width = 0.000000000000000000
@@ -95,7 +100,7 @@ inherited frmMain_iPhone4in: TfrmMain_iPhone4in
           Size.Height = 50.000000000000000000
           inherited Layout2: TLayout
             Size.Width = 50.000000000000000000
-            inherited Image2: TImage
+            inherited imgNewItem: TImage
               MultiResBitmap.Height = 704
               MultiResBitmap.Width = 618
               MultiResBitmap.LoadSize = 1

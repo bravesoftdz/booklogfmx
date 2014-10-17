@@ -12,10 +12,10 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="c:\program files (x86)\embarcadero\studio\15.0\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>BookLogFMX\library\lib\mips\</RemoteDir>
-            <RemoteName>libBookLogFMX.so</RemoteName>
-            <Operation>1</Operation>
+        <DeployFile Include="$(IBREDISTDIR)\android\interbase\oss_license_notice.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX\assets\internal\interbase\</RemoteDir>
+            <RemoteName>oss_license_notice.txt</RemoteName>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -24,6 +24,38 @@
             <RemoteDir>BookLogFMX\res\drawable-small\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\android\interbase\ibconfig" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX\assets\internal\interbase\</RemoteDir>
+            <RemoteName>ibconfig</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="DB\BOOKLOG.GDB" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX\assets\internal\</RemoteDir>
+            <RemoteName>BOOKLOG.GDB</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\android\interbase\license.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX\assets\internal\interbase\</RemoteDir>
+            <RemoteName>license.txt</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\android\interbase\ibconfig" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX\assets\internal\interbase\</RemoteDir>
+            <RemoteName>ibconfig</RemoteName>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -52,6 +84,30 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\android\interbase\oss_license_notice.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX\assets\internal\interbase\</RemoteDir>
+            <RemoteName>oss_license_notice.txt</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\reg_iblite.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX\assets\internal\interbase\license\</RemoteDir>
+            <RemoteName>reg_iblite.txt</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="DB\BOOKLOG.GDB" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX\</RemoteDir>
+            <RemoteName>BOOKLOG.GDB</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_48x48.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFMX\res\drawable-mdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
@@ -76,6 +132,22 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\reg_iblite.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX\assets\internal\interbase\license\</RemoteDir>
+            <RemoteName>reg_iblite.txt</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\android\interbase\admin.ib" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX\assets\internal\interbase\</RemoteDir>
+            <RemoteName>admin.ib</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="Android\Debug\libBookLogFMX.so" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFMX\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>libBookLogFMX.so</RemoteName>
@@ -89,6 +161,14 @@
             <RemoteDir>BookLogFMX\res\drawable-large\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\android\interbase\interbase.msg" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX\assets\internal\interbase\</RemoteDir>
+            <RemoteName>interbase.msg</RemoteName>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -133,6 +213,14 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\android\interbase\admin.ib" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX\assets\internal\interbase\</RemoteDir>
+            <RemoteName>admin.ib</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFMX\res\drawable-xlarge\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
@@ -149,6 +237,22 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\android\interbase\interbase.msg" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX\assets\internal\interbase\</RemoteDir>
+            <RemoteName>interbase.msg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\android\interbase\license.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX\assets\internal\interbase\</RemoteDir>
+            <RemoteName>license.txt</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='iOSDevice'">
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_76x76.png" Condition="'$(Config)'=='Debug'">
@@ -159,10 +263,26 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="DB\BOOKLOG.GDB" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX.app\</RemoteDir>
+            <RemoteName>BOOKLOG.GDB</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="iOSDevice\Debug\BookLogFMX.dSYM" Condition="'$(Config)'=='Debug'">
             <RemoteDir>$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF\</RemoteDir>
-            <RemoteName>BookLogFMX</RemoteName>
+            <RemoteName>libBookLogFMX</RemoteName>
             <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\interbase.msg" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX.app\StartUp\Documents\interbase\</RemoteDir>
+            <RemoteName>interbase.msg</RemoteName>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -191,6 +311,14 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\ibconfig" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX.app\StartUp\Documents\interbase\</RemoteDir>
+            <RemoteName>ibconfig</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_320x480.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFMX.app\</RemoteDir>
             <RemoteName>Default.png</RemoteName>
@@ -203,6 +331,14 @@
             <RemoteDir>BookLogFMX.app\</RemoteDir>
             <RemoteName>Default-Landscape.png</RemoteName>
             <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\license.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX.app\StartUp\Documents\interbase\</RemoteDir>
+            <RemoteName>license.txt</RemoteName>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -226,6 +362,14 @@
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImageLandscape_1024x768.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFMX.app\</RemoteDir>
             <RemoteName>Default-Landscape~ipad.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\oss_license_notice.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX.app\StartUp\Documents\interbase\</RemoteDir>
+            <RemoteName>oss_license_notice.txt</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -255,9 +399,25 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\license.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX.app\StartUp\Documents\interbase\</RemoteDir>
+            <RemoteName>license.txt</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SettingIcon_58x58.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFMX.app\</RemoteDir>
             <RemoteName>FM_SettingIcon_58x58.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\oss_license_notice.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX.app\StartUp\Documents\interbase\</RemoteDir>
+            <RemoteName>oss_license_notice.txt</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -271,9 +431,17 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\admin.ib" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX.app\StartUp\Documents\interbase\</RemoteDir>
+            <RemoteName>admin.ib</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="iOSDevice\Debug\BookLogFMX" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFMX.app\</RemoteDir>
-            <RemoteName>BookLogFMX</RemoteName>
+            <RemoteName>libBookLogFMX.so</RemoteName>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -288,10 +456,26 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\ibconfig" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX.app\StartUp\Documents\interbase\</RemoteDir>
+            <RemoteName>ibconfig</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_768x1004.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFMX.app\</RemoteDir>
             <RemoteName>Default~ipad.png</RemoteName>
             <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\admin.ib" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX.app\StartUp\Documents\interbase\</RemoteDir>
+            <RemoteName>admin.ib</RemoteName>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -352,6 +536,22 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\reg_iblite.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX.app\StartUp\Documents\interbase\license\</RemoteDir>
+            <RemoteName>reg_iblite.txt</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\interbase.msg" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX.app\StartUp\Documents\interbase\</RemoteDir>
+            <RemoteName>interbase.msg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_SpotlightSearchIcon_40x40.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFMX.app\</RemoteDir>
             <RemoteName>FM_SpotlightSearchIcon_40x40.png</RemoteName>
@@ -384,6 +584,14 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="DB\BOOKLOG.GDB" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX.app\StartUp\Document\</RemoteDir>
+            <RemoteName>BOOKLOG.GDB</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_640x1136.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFMX.app\</RemoteDir>
             <RemoteName>Default-568h@2x.png</RemoteName>
@@ -395,6 +603,14 @@
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_1536x2048.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFMX.app\</RemoteDir>
             <RemoteName>Default-Portrait@2x~ipad.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\reg_iblite.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX.app\StartUp\Documents\interbase\license\</RemoteDir>
+            <RemoteName>reg_iblite.txt</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -419,8 +635,32 @@
             <Overwrite>True</Overwrite>
             <Required>True</Required>
         </DeployFile>
+        <DeployFile Include="DB\BOOKLOG.GDB" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX\</RemoteDir>
+            <RemoteName>BOOKLOG.GDB</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="DB\BOOKLOG.GDB" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX\</RemoteDir>
+            <RemoteName>BOOKLOG.GDB</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='OSX32'">
+        <DeployFile Include="DB\BOOKLOG.GDB" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>BOOKLOG.GDB</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
             <RemoteDir>BookLogFMX.app\Contents\MacOS\</RemoteDir>
             <RemoteName>libcgunwind.1.0.dylib</RemoteName>
@@ -429,8 +669,32 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="DB\BOOKLOG.GDB" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>BOOKLOG.GDB</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='iOSSimulator'">
+        <DeployFile Include="DB\BOOKLOG.GDB" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX.app\</RemoteDir>
+            <RemoteName>BOOKLOG.GDB</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="DB\BOOKLOG.GDB" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX.app\</RemoteDir>
+            <RemoteName>BOOKLOG.GDB</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
             <RemoteDir>BookLogFMX.app\</RemoteDir>
             <RemoteName>libcgunwind.1.0.dylib</RemoteName>
@@ -440,5 +704,22 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
     </ItemGroup>
-    <ItemGroup Condition="'$(Platform)'=='Win64'"/>
+    <ItemGroup Condition="'$(Platform)'=='Win64'">
+        <DeployFile Include="DB\BOOKLOG.GDB" Condition="'$(Config)'=='Release'">
+            <RemoteDir>BookLogFMX\</RemoteDir>
+            <RemoteName>BOOKLOG.GDB</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="DB\BOOKLOG.GDB" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFMX\</RemoteDir>
+            <RemoteName>BOOKLOG.GDB</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
 </Project>

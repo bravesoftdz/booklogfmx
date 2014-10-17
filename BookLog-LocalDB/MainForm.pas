@@ -9,7 +9,7 @@ uses
   Fmx.Bind.DBEngExt, System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors,
   FMX.Effects, FMX.Objects, System.Actions, FMX.ActnList, FMX.TabControl,
   Data.Bind.Components, FMX.Controls.Presentation, FMX.Edit, FMX.ListView,
-  FMX.Memo;
+  FMX.Memo, Data.Bind.DBScope;
 
 type
   TfrmMain = class(TForm)
@@ -32,12 +32,11 @@ type
     tabitemNew: TTabItem;
     ToolBar3: TToolBar;
     Label3: TLabel;
-    btnNewCancel: TButton;
     btnNewSave: TButton;
     vsbEditFocus: TVertScrollBox;
     lytContentsNew: TLayout;
     Layout2: TLayout;
-    Image2: TImage;
+    imgNewItem: TImage;
     ListBox2: TListBox;
     ListBoxItem5: TListBoxItem;
     edtTitle: TEdit;
@@ -64,6 +63,20 @@ type
     lblPublisher: TLabel;
     ListBoxItem10: TListBoxItem;
     mmoComment: TMemo;
+    ListBoxItem4: TListBoxItem;
+    edtPhone: TEdit;
+    OverflowMenu: TListBox;
+    ListBoxItem11: TListBoxItem;
+    ListBoxItem12: TListBoxItem;
+    ShadowEffect1: TShadowEffect;
+    BindSourceDB1: TBindSourceDB;
+    LinkControlToField6: TLinkControlToField;
+    LinkControlToField5: TLinkControlToField;
+    LinkControlToField4: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField1: TLinkControlToField;
+    LinkPropertyToFieldBitmap2: TLinkPropertyToField;
     LinkListControlToField1: TLinkListControlToField;
     LinkPropertyToFieldBitmap: TLinkPropertyToField;
     LinkPropertyToFieldText: TLinkPropertyToField;
@@ -72,18 +85,8 @@ type
     LinkPropertyToFieldText4: TLinkPropertyToField;
     LinkPropertyToFieldText5: TLinkPropertyToField;
     LinkPropertyToFieldText6: TLinkPropertyToField;
-    LinkControlToField1: TLinkControlToField;
-    ListBoxItem4: TListBoxItem;
-    edtPhone: TEdit;
-    LinkControlToField2: TLinkControlToField;
-    LinkControlToField3: TLinkControlToField;
-    LinkControlToField4: TLinkControlToField;
-    LinkControlToField5: TLinkControlToField;
-    LinkControlToField6: TLinkControlToField;
-    OverflowMenu: TListBox;
-    ListBoxItem11: TListBoxItem;
-    ListBoxItem12: TListBoxItem;
-    ShadowEffect1: TShadowEffect;
+    LinkPropertyToFieldText7: TLinkPropertyToField;
+    btnNewCancel: TButton;
     procedure btnNewItemClick(Sender: TObject);
     procedure lstBooksItemClick(const Sender: TObject;
       const AItem: TListViewItem);
@@ -95,7 +98,7 @@ type
       KeyboardVisible: Boolean; const Bounds: TRect);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
-    procedure Image2Click(Sender: TObject);
+    procedure imgNewItemClick(Sender: TObject);
     procedure FormFocusChanged(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnDetailModifyClick(Sender: TObject);
@@ -103,6 +106,7 @@ type
     procedure ListBoxItem11Click(Sender: TObject);
     procedure lblPhoneClick(Sender: TObject);
     procedure lblWebSiteClick(Sender: TObject);
+    procedure btnNewSaveClick(Sender: TObject);
   private
     { Private declarations }
 
@@ -142,7 +146,7 @@ uses
 
 { TfrmMain }
 
-procedure TfrmMain.Image2Click(Sender: TObject);
+procedure TfrmMain.imgNewItemClick(Sender: TObject);
 begin
   TfrPhoto.CreateAndShow(Self, ChangeImageEvent, nil);
 end;
@@ -155,6 +159,8 @@ begin
   TabControl1.TabIndex := 0;
 
   OverflowMenu.Visible := False;
+
+  dmDataAccess.Connect;
 end;
 
 procedure TfrmMain.lblPhoneClick(Sender: TObject);
@@ -221,6 +227,8 @@ begin
     OverflowMenu.ApplyStyleLookup;
     OverflowMenu.RealignContent;
     OverflowMenu.Height := CalcOverflowMenuHeight;
+    OverflowMenu.Position.X := Width - OverflowMenu.Width - 5;
+    OverflowMenu.Position.Y := Toolbar2.Height;
   end;
 end;
 
@@ -231,7 +239,7 @@ end;
 
 procedure TfrmMain.ChangeImageEvent(Image: TBitmap);
 begin
-  Image2.Bitmap.Assign(Image);
+  imgNewItem.Bitmap.Assign(Image);
 end;
 
 procedure TfrmMain.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
@@ -255,7 +263,27 @@ end;
 
 procedure TfrmMain.btnNewItemClick(Sender: TObject);
 begin
+  dmDataAccess.NewItem;
+
   GotoNew;
+end;
+
+procedure TfrmMain.btnNewSaveClick(Sender: TObject);
+var
+  Thumbnail: TBitmap;
+  ImgStream, ThumbStream: TMemoryStream;
+begin
+  ImgStream := TMemoryStream.Create;
+  ThumbStream := TMemoryStream.Create;
+  try
+    imgNewItem.Bitmap.SaveToStream(ImgStream);
+    Thumbnail := imgNewItem.Bitmap.CreateThumbnail(80, 80);
+    Thumbnail.SaveToStream(ThumbStream);
+    dmDataAccess.SaveItem(ImgStream, ThumbStream);
+  finally
+    ImgStream.Free;
+    ThumbStream.Free;
+  end;
 end;
 
 {$REGION '입력컨트롤 화면에 보이도록 처리'}

@@ -5,20 +5,23 @@ object frWebBrowser: TfrWebBrowser
   TabOrder = 0
   object ToolBar2: TToolBar
     Size.Width = 393.000000000000000000
-    Size.Height = 48.000000000000000000
+    Size.Height = 44.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object lblURL: TLabel
       Align = Client
+      StyledSettings = [Family, Style, FontColor]
       Size.Width = 328.000000000000000000
-      Size.Height = 48.000000000000000000
+      Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'test'
     end
     object Button1: TButton
       Align = Right
       Position.X = 328.000000000000000000
       Size.Width = 65.000000000000000000
-      Size.Height = 48.000000000000000000
+      Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'deletetoolbutton'
       TabOrder = 2
@@ -29,7 +32,7 @@ object frWebBrowser: TfrWebBrowser
   object WebBrowser1: TWebBrowser
     Align = Client
     Size.Width = 393.000000000000000000
-    Size.Height = 383.000000000000000000
+    Size.Height = 387.000000000000000000
     Size.PlatformDefault = False
     OnDidStartLoad = WebBrowser1DidStartLoad
   end
