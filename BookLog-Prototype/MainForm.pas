@@ -1,5 +1,5 @@
 {
-  작성자 : 김현수(Humphery, Kim / hjfactory@gmail.com)
+  작성자 : 김현수(Humphery, Kim / http://blog.hfj.pe.kr / hjfactory@gmail.com)
   소스설명 : http://blog.hjf.pe.kr/255
   원소스 : https://github.com/hjfactory/booklogfmx
 }
@@ -90,6 +90,7 @@ type
     ChangeTabAction1: TChangeTabAction;
     LinkPropertyToFieldBitmap2: TLinkPropertyToField;
     ShadowEffect2: TShadowEffect;
+    Rectangle2: TRectangle;
     procedure ListView1ItemClick(const Sender: TObject;
       const AItem: TListViewItem);
     procedure Button1Click(Sender: TObject);
