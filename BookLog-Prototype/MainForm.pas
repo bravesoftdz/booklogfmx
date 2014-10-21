@@ -24,19 +24,18 @@ type
     TabItem3: TTabItem;
     ToolBar1: TToolBar;
     Label1: TLabel;
-    Button1: TButton;
+    btnNewItem: TButton;
     ListView1: TListView;
     ToolBar2: TToolBar;
     Label2: TLabel;
-    Button2: TButton;
-    Button3: TButton;
+    btnBackList: TButton;
+    btnDetail: TButton;
     Layout1: TLayout;
     ListBox1: TListBox;
     ListBoxItem1: TListBoxItem;
     ListBoxItem2: TListBoxItem;
     ListBoxItem3: TListBoxItem;
     ListBoxItem4: TListBoxItem;
-    Rectangle1: TRectangle;
     ShadowEffect1: TShadowEffect;
     Image1: TImage;
     Layout2: TLayout;
@@ -48,8 +47,8 @@ type
     lblComment: TLabel;
     ToolBar3: TToolBar;
     Label3: TLabel;
-    Button4: TButton;
-    Button5: TButton;
+    btnCancel: TButton;
+    btnSaveItem: TButton;
     lytContentsNew: TLayout;
     Layout4: TLayout;
     imgNewItem: TImage;
@@ -68,8 +67,8 @@ type
     mmoComment: TMemo;
     vsbEditFocus: TVertScrollBox;
     OverflowMenu: TListBox;
-    ListBoxItem5: TListBoxItem;
-    ListBoxItem6: TListBoxItem;
+    lstItemModify: TListBoxItem;
+    lstItemDelete: TListBoxItem;
     BindingsList1: TBindingsList;
     LinkListControlToField1: TLinkListControlToField;
     LinkPropertyToFieldBitmap: TLinkPropertyToField;
@@ -91,16 +90,17 @@ type
     LinkPropertyToFieldBitmap2: TLinkPropertyToField;
     ShadowEffect2: TShadowEffect;
     Rectangle2: TRectangle;
+    Panel1: TPanel;
     procedure ListView1ItemClick(const Sender: TObject;
       const AItem: TListViewItem);
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
-    procedure Button5Click(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
+    procedure btnNewItemClick(Sender: TObject);
+    procedure btnBackListClick(Sender: TObject);
+    procedure btnSaveItemClick(Sender: TObject);
+    procedure btnCancelClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
-    procedure ListBoxItem5Click(Sender: TObject);
-    procedure ListBoxItem6Click(Sender: TObject);
+    procedure btnDetailClick(Sender: TObject);
+    procedure lstItemModifyClick(Sender: TObject);
+    procedure lstItemDeleteClick(Sender: TObject);
     procedure FormFocusChanged(Sender: TObject);
     procedure FormVirtualKeyboardHidden(Sender: TObject;
       KeyboardVisible: Boolean; const Bounds: TRect);
@@ -110,6 +110,7 @@ type
     procedure imgNewItemClick(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
+    procedure lblPhoneClick(Sender: TObject);
   private
     { Private declarations }
     FKBBounds: TRectF;
@@ -136,21 +137,21 @@ implementation
 
 {$R *.fmx}
 
-uses DataAccessModule, System.Math, WebBrowserFrame, PhotoFrame;
+uses DataAccessModule, System.Math, FMX.Platform, FMX.PhoneDialer, WebBrowserFrame, PhotoFrame;
 
 { TForm1 }
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TForm1.btnNewItemClick(Sender: TObject);
 begin
   GotoNew;
 end;
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TForm1.btnBackListClick(Sender: TObject);
 begin
   GotoList;
 end;
 
-procedure TForm1.Button3Click(Sender: TObject);
+procedure TForm1.btnDetailClick(Sender: TObject);
 begin
   OverflowMenu.Visible := not OverflowMenu.Visible;
   if OverflowMenu.Visible then
@@ -165,14 +166,14 @@ begin
 end;
 
 // 수정
-procedure TForm1.ListBoxItem5Click(Sender: TObject);
+procedure TForm1.lstItemModifyClick(Sender: TObject);
 begin
   OverflowMenu.Visible := False;
   GotoNew;
 end;
 
 // 삭제
-procedure TForm1.ListBoxItem6Click(Sender: TObject);
+procedure TForm1.lstItemDeleteClick(Sender: TObject);
 begin
   OverflowMenu.Visible := False;
 
@@ -186,12 +187,12 @@ begin
     end);
 end;
 
-procedure TForm1.Button4Click(Sender: TObject);
+procedure TForm1.btnCancelClick(Sender: TObject);
 begin
   GotoList;
 end;
 
-procedure TForm1.Button5Click(Sender: TObject);
+procedure TForm1.btnSaveItemClick(Sender: TObject);
 begin
   GotoList;
 end;
@@ -268,6 +269,14 @@ end;
 procedure TForm1.imgNewItemClick(Sender: TObject);
 begin
   TfrPhoto.CreateAndShow(Self, ChangeImageEvent, nil);
+end;
+
+procedure TForm1.lblPhoneClick(Sender: TObject);
+var
+  PhoneDlrSvc: IFMXPhoneDialerService;
+begin
+  if TPlatformServices.Current.SupportsPlatformService(IFMXPhoneDialerService, IInterface(PhoneDlrSvc)) then
+    PhoneDlrSvc.Call(lblPhone.Text);
 end;
 
 procedure TForm1.lblWebSiteClick(Sender: TObject);

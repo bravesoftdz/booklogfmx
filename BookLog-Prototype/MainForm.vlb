@@ -22,9 +22,6 @@ Visible=True
 [Label1]
 Coordinates=1085,10,46,51
 
-[Button1]
-Coordinates=362,990,53,51
-
 [Layout2]
 Coordinates=190,1067,53,33
 
@@ -52,9 +49,6 @@ Coordinates=1269,990,58,33
 [lblAuthor]
 Coordinates=449,913,60,51
 
-[Button2]
-Coordinates=507,990,53,51
-
 [Layout1]
 Coordinates=775,990,53,33
 
@@ -63,12 +57,6 @@ Coordinates=451,580,57,51
 
 [ToolBar3]
 Coordinates=1148,1067,58,33
-
-[Rectangle1]
-Coordinates=10,1067,69,33
-
-[Button5]
-Coordinates=780,10,53,51
 
 [ListBoxItem4]
 Coordinates=643,1067,79,33
@@ -82,9 +70,6 @@ Coordinates=665,10,89,141
 [Image1]
 Coordinates=440,750,49,51
 Visible=True
-
-[Button4]
-Coordinates=283,990,53,51
 
 [Label2]
 Coordinates=456,802,46,51
@@ -101,11 +86,8 @@ Coordinates=696,990,53,33
 [ShadowEffect1]
 Coordinates=628,276,101,36
 
-[Button3]
-Coordinates=859,10,53,51
-
 []
-Coordinates=357,261,91,36
+Coordinates=10,1067,69,33
 
 [edtTitle]
 Coordinates=60,660,50,51
@@ -161,12 +143,6 @@ Coordinates=354,1067,79,33
 [ListBoxItem7]
 Coordinates=958,1067,79,33
 
-[ListBoxItem6]
-Coordinates=124,187,79,33
-
-[ListBoxItem5]
-Coordinates=25,187,79,33
-
 [ChangeTabAction1]
 Coordinates=0,0,108,33
 
@@ -175,4 +151,25 @@ Coordinates=127,1,70,33
 
 [imgNewItem]
 Coordinates=160,110,49,51
+
+[btnNewItem]
+Coordinates=362,990,53,51
+
+[btnSaveItem]
+Coordinates=780,10,53,51
+
+[btnCancel]
+Coordinates=283,990,53,51
+
+[btnBackList]
+Coordinates=507,990,53,51
+
+[btnDetail]
+Coordinates=859,10,53,51
+
+[lstItemModify]
+Coordinates=25,187,79,33
+
+[lstItemDelete]
+Coordinates=124,187,79,33
 
