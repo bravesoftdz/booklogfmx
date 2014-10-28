@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3581D57A-5441-42A4-A9C4-91DE5D113AD7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Server\CRM_Server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Mobile\CustMgrFMX.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CRM_Server">
+        <MSBuild Projects="Server\CRM_Server.dproj"/>
+    </Target>
+    <Target Name="CRM_Server:Clean">
+        <MSBuild Projects="Server\CRM_Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CRM_Server:Make">
+        <MSBuild Projects="Server\CRM_Server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CustMgrFMX">
+        <MSBuild Projects="Mobile\CustMgrFMX.dproj"/>
+    </Target>
+    <Target Name="CustMgrFMX:Clean">
+        <MSBuild Projects="Mobile\CustMgrFMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CustMgrFMX:Make">
+        <MSBuild Projects="Mobile\CustMgrFMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CRM_Server;CustMgrFMX"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CRM_Server:Clean;CustMgrFMX:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CRM_Server:Make;CustMgrFMX:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
