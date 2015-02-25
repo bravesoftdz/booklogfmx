@@ -44,17 +44,17 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>BookLogFmx\res\drawable-normal\</RemoteDir>
-            <RemoteName>splash_image.png</RemoteName>
+        <DeployFile Include="c:\program files (x86)\embarcadero\studio\15.0\lib\android\debug\x86\libnative-activity.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx\library\lib\x86\</RemoteDir>
+            <RemoteName>libBookLogFmx.so</RemoteName>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="c:\program files (x86)\embarcadero\studio\15.0\lib\android\debug\x86\libnative-activity.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>BookLogFmx\library\lib\x86\</RemoteDir>
-            <RemoteName>libBookLogFmx.so</RemoteName>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx\res\drawable-normal\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -271,6 +271,14 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_1242x2208.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>Default-736h@3x.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\interbase.msg" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\StartUp\Documents\interbase\</RemoteDir>
             <RemoteName>interbase.msg</RemoteName>
@@ -287,9 +295,9 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Icons\Icon-57.png" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_87x87.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\</RemoteDir>
-            <RemoteName>Icon-57.png</RemoteName>
+            <RemoteName>FM_ApplicationIcon_87x87.png</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -359,6 +367,14 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_180x180.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>FM_ApplicationIcon_180x180.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\oss_license_notice.txt" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\StartUp\Documents\interbase\</RemoteDir>
             <RemoteName>oss_license_notice.txt</RemoteName>
@@ -393,7 +409,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="iOSDevice\Debug\BookLogFmx.entitlements" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteDir>BookLogFmx.app\../\</RemoteDir>
             <RemoteName>Entitlements.plist</RemoteName>
             <Operation>1</Operation>
             <LocalCommand/>
@@ -411,22 +427,6 @@
         <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\admin.ib" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\StartUp\Documents\interbase\</RemoteDir>
             <RemoteName>admin.ib</RemoteName>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Icons\Icon-120.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>BookLogFmx.app\</RemoteDir>
-            <RemoteName>Icon-120.png</RemoteName>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Icons\icon-60.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>BookLogFmx.app\</RemoteDir>
-            <RemoteName>icon-60.png</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -552,9 +552,49 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Icons\Icon-57.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>Icon-57.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Icons\Icon-114.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>Icon-114.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_2208x1242.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>Default-Landscape-736h@3x.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SettingIcon_58x58.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\</RemoteDir>
             <RemoteName>FM_SettingIcon_58x58.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Icons\icon-60.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>icon-60.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_750x1334.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>Default-667h@2x.png</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -576,6 +616,14 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Icons\Icon-120.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>Icon-120.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_72x72.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_72x72.png</RemoteName>
@@ -587,14 +635,6 @@
         <DeployFile Include="$(IBREDISTDIR)\ios_device\interbase\interbase.msg" Condition="'$(Config)'=='Release'">
             <RemoteDir>BookLogFmx.app\StartUp\Documents\interbase\</RemoteDir>
             <RemoteName>interbase.msg</RemoteName>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Icons\Icon-114.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>BookLogFmx.app\</RemoteDir>
-            <RemoteName>Icon-114.png</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -761,7 +801,7 @@
         </DeployFile>
         <DeployFile Include="iOSSimulator\Debug\BookLogFmx" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\</RemoteDir>
-            <RemoteName>BookLogFmx</RemoteName>
+            <RemoteName>BookLogFmx.exe</RemoteName>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -880,9 +920,9 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Icons\Icon_114.png" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="Icons\Icon-114.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\</RemoteDir>
-            <RemoteName>Icon_114.png</RemoteName>
+            <RemoteName>Icon-114.png</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -928,6 +968,14 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_750x1334.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>Default-667h@2x.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="iOSSimulator\Debug\BookLogFmx.info.plist" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\</RemoteDir>
             <RemoteName>Info.plist</RemoteName>
@@ -960,9 +1008,9 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Icons\Icon_57.png" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="Icons\Icon-57.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\</RemoteDir>
-            <RemoteName>Icon_57.png</RemoteName>
+            <RemoteName>Icon-57.png</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -971,6 +1019,14 @@
         <DeployFile Include="$(IBREDISTDIR)\ios_sim\interbase\interbase.msg" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\StartUp\Documents\interbase\</RemoteDir>
             <RemoteName>interbase.msg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_2208x1242.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>Default-Landscape-736h@3x.png</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -1003,6 +1059,14 @@
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_50x50.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\</RemoteDir>
             <RemoteName>FM_SpotlightSearchIcon_50x50.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_180x180.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>FM_ApplicationIcon_180x180.png</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -1048,6 +1112,14 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\ios_sim\interbase\oss_license_notice.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\StartUp\Documents\interbase\</RemoteDir>
+            <RemoteName>oss_license_notice.txt</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(IBREDISTDIR)\ios_sim\interbase\admin.ib" Condition="'$(Config)'=='Debug'">
             <RemoteDir>BookLogFmx.app\StartUp\Documents\interbase\</RemoteDir>
             <RemoteName>admin.ib</RemoteName>
@@ -1056,9 +1128,17 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(IBREDISTDIR)\ios_sim\interbase\oss_license_notice.txt" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>BookLogFmx.app\StartUp\Documents\interbase\</RemoteDir>
-            <RemoteName>oss_license_notice.txt</RemoteName>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_1242x2208.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>Default-736h@3x.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_87x87.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BookLogFmx.app\</RemoteDir>
+            <RemoteName>FM_ApplicationIcon_87x87.png</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>

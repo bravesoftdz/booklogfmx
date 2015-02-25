@@ -169,14 +169,12 @@ begin
   OverflowMenu.Visible := False;
 
   vsbEditFocus.OnCalcContentBounds := CalcContentBoundsProc;
-
-  DataModule1.Connect; // 데이터베이스 연결
 end;
 
 procedure TForm1.btnNewItemClick(Sender: TObject);
 begin
   ListView1.ItemIndex := -1;
-  DataModule1.AppendMode; // 입력 모드로 변경
+  DataModule1.InsertMode; // 입력 모드로 변경
   GotoNew;
 end;
 

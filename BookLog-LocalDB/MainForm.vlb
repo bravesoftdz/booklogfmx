@@ -166,23 +166,26 @@ Visible=False
 Coordinates=180,90,117,411
 
 [btnNewItem]
-Coordinates=20,340,53,51
+Coordinates=20,340,72,51
 
 [btnBackList]
-Coordinates=506,267,53,51
+Coordinates=506,267,73,51
 
 [btnDetail]
-Coordinates=585,267,53,51
+Coordinates=585,267,58,51
 
 [lstItemModify]
-Coordinates=730,470,79,33
+Coordinates=730,470,80,33
 
 [lstItemDelete]
-Coordinates=50,510,79,33
+Coordinates=50,510,78,33
 
 [btnCancel]
-Coordinates=768,10,53,51
+Coordinates=768,10,64,51
 
 [btnSaveItem]
-Coordinates=10,344,53,51
+Coordinates=10,344,75,51
+
+[Panel1]
+Coordinates=235,1,47,33
 

@@ -18,18 +18,26 @@ type
     FDQuery1: TFDQuery;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     FDPhysIBDriverLink1: TFDPhysIBDriverLink;
+    FDQuery1BOOK_SEQ: TIntegerField;
+    FDQuery1BOOK_TITLE: TWideStringField;
+    FDQuery1BOOK_AUTHOR: TWideStringField;
+    FDQuery1BOOK_PUBLISHER: TWideStringField;
+    FDQuery1BOOK_PHONE: TWideStringField;
+    FDQuery1BOOK_WEBSITE: TWideStringField;
+    FDQuery1BOOK_COMMENT: TWideStringField;
+    FDQuery1BOOK_THUMB: TBlobField;
+    FDQuery1BOOK_IMAGE: TBlobField;
     procedure FDConnection1BeforeConnect(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
-    procedure Connect; // 데이터베이스 연결
-    procedure AppendMode; // 입력 모드로 변경
+    procedure InsertMode; // 입력 모드로 변경
     procedure EditMode; // 수정 모드로 변경
-    procedure SetImage(ABitmap: TBitmap); // 이미지저장(본문, 목록의 썸네일 이미지)
     procedure SaveItem; // 항목 저장(입력/수정)
     procedure CancelItem; // 입력/수정 모드 취소
     procedure DeleteItem; // 선택항목 삭제
+    procedure SetImage(ABitmap: TBitmap); // 이미지저장(본문, 목록의 썸네일 이미지)
   end;
 
 var
@@ -46,27 +54,11 @@ uses
 
 { TDataModule1 }
 
-// 입력/수정 모드 취소
-procedure TDataModule1.CancelItem;
+// 입력모드
+procedure TDataModule1.InsertMode;
 begin
-  if FDQuery1.UpdateStatus = TUpdateStatus.usInserted then
-    FDQuery1.Cancel;
-end;
-
-// 데이터베이스 연결
-procedure TDataModule1.Connect;
-begin
-  FDConnection1.Connected := True;
-  FDQuery1.Active := True;
-end;
-
-// 현재항목 삭제
-procedure TDataModule1.DeleteItem;
-begin
-  FDQuery1.Delete;
-  FDQuery1.ApplyUpdates(0);
-  FDQuery1.CommitUpdates;
-  FDQuery1.Refresh;
+  FDQuery1.Append;
+  FDQuery1.FieldByName('BOOK_SEQ').AsInteger := 0;
 end;
 
 // 수정모드
@@ -83,20 +75,26 @@ begin
 {$ENDIF}
 end;
 
-// 입력모드
-procedure TDataModule1.AppendMode;
-begin
-  FDQuery1.Append;
-end;
-
 // 항목 저장
 procedure TDataModule1.SaveItem;
 begin
-  // 입력 시  BOOK_SEQ 자동생성되지만 미 입력 시 오류
-  if FDQuery1.UpdateStatus = TUpdateStatus.usInserted then
-    FDQuery1.FieldByName('BOOK_SEQ').AsInteger := 0;
-
   FDQuery1.Post;
+  FDQuery1.ApplyUpdates(0);
+  FDQuery1.CommitUpdates;
+  FDQuery1.Refresh;
+end;
+
+// 입력/수정 모드 취소
+procedure TDataModule1.CancelItem;
+begin
+  if FDQuery1.UpdateStatus = TUpdateStatus.usInserted then
+    FDQuery1.Cancel;
+end;
+
+// 현재항목 삭제
+procedure TDataModule1.DeleteItem;
+begin
+  FDQuery1.Delete;
   FDQuery1.ApplyUpdates(0);
   FDQuery1.CommitUpdates;
   FDQuery1.Refresh;
